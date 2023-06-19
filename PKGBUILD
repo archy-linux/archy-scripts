@@ -1,4 +1,4 @@
-# Maintainer: Anas Eldarhy <anas.elgarhy.dev@gmail.com>
+# Maintainer: Anas Elgarhy <anas.elgarhy.dev@gmail.com>
 pkgname=archy-scripts
 pkgver=0.0.1
 pkgrel=1
