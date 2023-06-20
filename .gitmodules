@@ -1,3 +1,6 @@
 [submodule "pkg/archy-scripts/archy-scripts"]
 	path = pkg/archy-scripts/archy-scripts
 	url = ssh://aur@aur.archlinux.org/archy-scripts.git
+[submodule "pkg/archy-scripts-git/archy-scripts-git"]
+	path = pkg/archy-scripts-git/archy-scripts-git
+	url = ssh://aur@aur.archlinux.org/archy-scripts-git.git
