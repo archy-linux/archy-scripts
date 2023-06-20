@@ -1,6 +1,6 @@
 # Maintainer: Anas Elgarhy <anas.elgarhy.dev@gmail.com>
 pkgname=archy-scripts
-pkgver=0.0.1
+pkgver=0.0.2
 pkgrel=1
 epoch=
 pkgdesc="The archy linux utilty scripts"
@@ -16,7 +16,7 @@ provides=('touchpad-toggle' 'usbmount')
 conflicts=()
 changelog=
 source=("$url/archive/refs/tags/$pkgver.tar.gz")
-md5sums=("83c0c3e74d882ff2326064fa43371aa1")
+md5sums=("19623d64d19ed6e0f969a39a81f4f4e5")
 validpgpkeys=('4514 F39E 840E 0FFC DE9D  2815 0501 802A 1D49 6528')
 
 package() {
