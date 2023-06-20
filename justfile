@@ -4,6 +4,7 @@ _ver := "0.0.2"
 pkg_name := "arcy-scripts"
 build_dir := justfile_directory() / "build"
 temp_dir := build_dir / "temp"
+pkg_build := justfile_directory() / "pkg" / pkg_name / "PKGBUILD"
 
 
 alias b := build
@@ -28,13 +29,13 @@ update-checksums ver=_ver: (build ver)
   #!/usr/bin/env sh
   set -euxo pipefail
   new_md5sum_value=$(md5sum {{build_dir}}/{{pkg_name}}_{{ver}}.tar.gz | cut -d ' ' -f1)
-  sed -i '/^md5sums=/c\md5sums=(\"'$new_md5sum_value'\")' PKGBUILD
+  sed -i '/^md5sums=/c\md5sums=(\"'$new_md5sum_value'\")' {{pkg_build}}
 
 update-pkgver ver=_ver:
-  sed -i '/^pkgver=/c\pkgver={{ver}}' PKGBUILD
+  sed -i '/^pkgver=/c\pkgver={{ver}}' {{pkg_build}}
   sed -i '/^_ver :=/c\_ver := "{{ver}}"' {{justfile()}}
 
-_commit ver=_ver:
+@_commit ver=_ver:
   git commit -am "[deploy] Bump version to {{ver}}"
   git push
 
