@@ -16,7 +16,7 @@ provides=('touchpad-toggle' 'usbmount')
 conflicts=()
 changelog=
 source=("$url/archive/refs/tags/$pkgver.tar.gz")
-md5sums=("b42b0030add354940e1d316d0244d4d3")
+md5sums=("83c0c3e74d882ff2326064fa43371aa1")
 validpgpkeys=('4514 F39E 840E 0FFC DE9D  2815 0501 802A 1D49 6528')
 
 package() {
