@@ -15,12 +15,12 @@ optdepends=()
 provides=('touchpad-toggle' 'usbmount')
 conflicts=()
 changelog=
-source=("$url/archive/refs/tags/$pkgver.tar.gz")
-md5sums=("19623d64d19ed6e0f969a39a81f4f4e5")
+source=("$url/archive/refs/tags/$pkgname_$pkgver.tar.gz")
+md5sums=('2a339234bfc66f44a8c785082f540548')
 validpgpkeys=('4514 F39E 840E 0FFC DE9D  2815 0501 802A 1D49 6528')
 
 package() {
-	cd "$pkgver" || exit 1
+	cd "$pkgname_$pkgver" || exit 1
   # shellcheck disable=SC2154
   install -Dm755 touchpad_toggle.sh "$pkgdir/usr/bin/${provides[0]}"
   install -Dm755 usbmount.sh "$pkgdir/usr/bin/${provides[1]}"
