@@ -40,5 +40,5 @@ _commit ver=_ver:
 
 release ver=_ver: (update-pkgver ver) (update-checksums ver) (build ver) (_commit ver)
   gh release create --generate-notes {{ver}}
-  gh release upload {{build_dir}}/{{pkg_name}}_{{ver}}.tar.gz
+  gh release upload {{ver}} {{build_dir}}/{{pkg_name}}_{{ver}}.tar.gz
   @echo "Done."
