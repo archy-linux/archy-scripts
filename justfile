@@ -1,7 +1,7 @@
 #!/usr/bin/env just --justfile
 
 _ver := "0.0.2"
-pkg_name := "arcy-scripts"
+pkg_name := "archy-scripts"
 build_dir := justfile_directory() / "build"
 temp_dir := build_dir / "temp"
 pkg_build := justfile_directory() / "pkg" / pkg_name / "PKGBUILD"
