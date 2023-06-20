@@ -9,9 +9,7 @@ temp_dir := build_dir / "temp"
 alias b := build
 alias sums := update-checksums
 alias ver := update-pkgver
-# alias h := show-help
-# alias t := test
-# alias l := lint
+alias r := release
 
 default: 
   @just --list
