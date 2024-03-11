@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # Mounting or Unmounting devices via the terminal
-# This script requires that you have sudo installed and that you have sudo rights.
+# This script requires that you have installed and that you have rights.
 # Create an executable file /usr/local/bin/usbstick.sh:
 
 # Set the number of USB port available
 usbCount=4
 # ^ You have to create as many directories as USB port available
-#   ( e.g. run the commands 'sudo mkdir /mnt/usbstick1'
-#   to 'sudo mkdir /mnt/usbstick4' prior to running this script )
+#   ( e.g. run the commands 'mkdir /mnt/usbstick1'
+#   to 'mkdir /mnt/usbstick4' prior to running this script )
 
 # Search for new devices starting by /dev/sdX with X the value of
 deviceStart="b" #/dev/sdb
@@ -72,11 +72,11 @@ then
         fi
 
         # Mount the device
-        sudo mount -o gid=users,fmask=113,dmask=002 -U $uuid /mnt/usbstick$i
+        mount -o gid=users,fmask=113,dmask=002 -U $uuid /mnt/usbstick$i
         echo "    ---> Device $uuid mounted as /mnt/usbstick$i"
     else
         # Unmount the device
-        sudo umount $mountpoint
+        umount $mountpoint
         echo "    ---> Device $uuid unmounted [$mountpoint]"
     fi
     exit 0
